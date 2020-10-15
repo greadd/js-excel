@@ -1,4 +1,4 @@
-import { range } from '../../core/utils'
+import { range } from '@core/utils'
 
 export function sholdResize(event) {
   return event.target.dataset.resize

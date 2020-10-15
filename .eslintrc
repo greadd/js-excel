@@ -8,10 +8,11 @@
   "rules": {
     "semi": "off",
     "arrow-parens": "off",
-    "object-curly-spacing":"off",
-    "comma-dangle":"off",
-    "require-jsdoc":"off",
-    "indent":"off"
+    "object-curly-spacing": "off",
+    "comma-dangle": "off",
+    "require-jsdoc": "off",
+    "indent": "off",
+    "operator-linebreak": "off"
   },
   "extends": ["eslint:recommended", "google"]
 }
