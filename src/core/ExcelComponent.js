@@ -33,6 +33,10 @@ export class ExcelComponent extends DomListener {
 
   storeChanged() {}
 
+  isWatching(key) {
+    return this.subscribe.includes(key)
+  }
+
   init() {
     this.initDOMListeners()
   }
