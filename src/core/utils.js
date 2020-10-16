@@ -44,6 +44,14 @@ export function debounce(fn, ms) {
       fn(...args)
     }
     clearTimeout(timeout)
-    timeout = setTimeout(later, ms);
+    timeout = setTimeout(later, ms)
   }
+}
+
+export function clone(obj) {
+  return JSON.parse(JSON.stringify(obj))
+}
+
+export function preventDeafult(event) {
+  event.preventDefault()
 }
