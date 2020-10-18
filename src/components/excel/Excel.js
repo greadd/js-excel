@@ -1,4 +1,4 @@
-import { preventDeafult } from '../../core/utils';
+import { preventDefault } from '../../core/utils';
 import { updateDate } from '@/redux/actions';
 import { $ } from '@core/dom'
 import { Emitter } from '@core/Emitter'
@@ -32,7 +32,7 @@ export class Excel {
 
   init() {
     if (process.env.NODE_ENV) {
-      document.addEventListener('contextmenu', preventDeafult)
+      document.addEventListener('contextmenu', preventDefault)
     }
     this.store.dispatch(updateDate())
     this.subscriber.subscribeComponents(this.components)
@@ -42,6 +42,6 @@ export class Excel {
   destroy() {
     this.subscriber.unsubscribeFromStore()
     this.components.forEach(component => component.destroy())
-    document.removeEventListener('contextmenu', preventDeafult)
+    document.removeEventListener('contextmenu', preventDefault)
   }
 }
